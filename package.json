@@ -1,0 +1,27 @@
+{
+  "name": "markdoc",
+  "version": "1.0.0",
+  "description": "generate document website from markdown files automatically",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brian6peng/markdoc.git"
+  },
+  "keywords": [
+    "markdown",
+    "node"
+  ],
+  "author": "brian",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/brian6peng/markdoc/issues"
+  },
+  "homepage": "https://github.com/brian6peng/markdoc#readme",
+  "dependencies": {
+    "marked": "^0.3.5"
+  }
+}

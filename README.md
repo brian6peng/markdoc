@@ -1,2 +1,2 @@
 # markdoc
-Generate database document automatically
+Generate document website from markdown files automatically
