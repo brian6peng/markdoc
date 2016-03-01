@@ -1,4 +1,4 @@
-﻿var marked = require('./marked.js');
+﻿var marked = require('D:\\Code\\js\\marked\\lib\\marked.js');
 var fs = require('fs')
 var path = require('path');
 
@@ -46,7 +46,8 @@ function main() {
         var result = templateContent;
         result = result.replace('{{FileName}}', file);
         marked.setOptions({
-            summary: false
+            summary: false,
+            firstDepth: 0
         });
         var content = marked(files[file]);
         result = result.replace('{{content}}', content);
@@ -56,6 +57,8 @@ function main() {
         var summary = marked(files[file]);
         result = result.replace('{{summary}}', summary);
 
+        var resultPath = path.join(baseDir, file).replace(/[^.]+$/, 'html1');
+        fs.writeFileSync(resultPath, summary);
         var resultPath = path.join(baseDir, file).replace(/[^.]+$/, 'html');
         fs.writeFileSync(resultPath, result);
     }
