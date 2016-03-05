@@ -57,8 +57,6 @@ function main() {
         var summary = marked(files[file]);
         result = result.replace('{{summary}}', summary);
 
-        var resultPath = path.join(baseDir, file).replace(/[^.]+$/, 'html1');
-        fs.writeFileSync(resultPath, summary);
         var resultPath = path.join(baseDir, file).replace(/[^.]+$/, 'html');
         fs.writeFileSync(resultPath, result);
     }

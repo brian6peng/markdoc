@@ -12,5 +12,5 @@ marked.setOptions({
     summary: true
 });
 
-console.log(marked(fs.readFileSync('D:\\Document\\markdown\\需求文档.md', 'utf8')));
+console.log(marked(fs.readFileSync('D:\\Document\\markdown\\test.md', 'utf8')));
 
